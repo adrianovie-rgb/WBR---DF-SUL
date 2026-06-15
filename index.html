@@ -349,16 +349,16 @@ var dvFC=((tP23-tFC23)/tFC23*100).toFixed(1);
 var s3=[];
 for(var i=0;i<vn.length;i++){
   var nd=vn[i],fc=D_fc23[nd]||0,real=D_vol23_ddd[nd]||D.n[nd].pr,dv=fc>0?(real-fc)/fc*100:null;
-  s3.push({nd:nd,fc:fc,real:real,p22:D.w22n[nd].pr,p24:D.w24n[nd].pr,dv:dv});
+  s3.push({nd:nd,fc:fc,real:real,p22:D.w22n[nd].pr,p24:(D.w24n[nd]?D.w24n[nd].pr:0),dv:dv});
 }
 s3.sort(function(a,b){return (b.dv==null?-999:Math.abs(b.dv))-(a.dv==null?-999:Math.abs(a.dv));});
 var t3='<div class="kr">';
-t3+='<div class="k"><div class="l">Forecast W23 Total</div><div class="v">'+F(tFC23)+'</div><div class="s">planejado (4 dias)</div></div>';
+t3+='<div class="k"><div class="l">Forecast W24 Total</div><div class="v">'+F(tFC23)+'</div><div class="s">planejado W24</div></div>';
 t3+='<div class="k y"><div class="l">Real W24</div><div class="v">'+F(tP23)+'</div><div class="s">Corpus Christi</div></div>';
 t3+='<div class="k '+(parseFloat(dvFC)>=0?'g':'r')+'"><div class="l">Desvio FC</div><div class="v">'+(parseFloat(dvFC)>=0?'+':'')+dvFC+'%</div><div class="s">vs forecast</div></div>';
 t3+='<div class="k"><div class="l">W22 D-1 Ref.</div><div class="v">'+F(tP22)+'</div><div class="s">WoW: '+dvWoW+'%</div></div>';
 t3+='<div class="k g"><div class="l">W24* D+1</div><div class="v">'+F(D.w24partial.pr)+'</div><div class="s">parcial (09/06)</div></div></div>';
-t3+='<div class="nb"><b>Forecast W23 (fonte: DDD.xlsx):</b> W23 completo &mdash; 4 dias &uacute;teis (excluindo Corpus Christi 04/06) | Real: volume DDD | Tabela ordenada: maior desvio &rarr; menor | Tabela ordenada: maior desvio &rarr; menor</div>';
+t3+='<div class="nb"><b>Forecast W23 (fonte: DDD.xlsx):</b> W23 completo &mdash; 4 dias &uacute;teis (excluindo 09–15/06/2026 | Real: volume | Tabela ordenada: maior desvio &rarr; menor | Tabela ordenada: maior desvio &rarr; menor</div>';
 t3+='<div class="bx"><h3>Forecast vs Real | W24 | Ordenado por Desvio (maior &rarr; menor)</h3><div class="cw"><svg id="cVol" width="100%" viewBox="0 0 1100 340"></svg></div>';
 t3+='<table><thead><tr><th>Rank</th><th>Node</th><th>Tipo</th><th>Partner</th><th>Forecast W24</th><th>Real W24</th><th>Desvio FC%</th><th>W24* D+1</th></tr></thead><tbody>';
 for(var i=0;i<s3.length;i++){
