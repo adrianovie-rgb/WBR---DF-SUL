@@ -386,12 +386,12 @@ var ppVals={};for(var i=0;i<po.length;i++){var nd=po[i];ppVals[nd]=D.n[nd].pp;}t
 document.getElementById('tab4').innerHTML=t4;
 var pi=[];for(var i=0;i<po.length;i++){var nd=po[i],v=D.n[nd].pp;if(v&&v>0)pi.push({nd:nd,v:v,tp:D.n[nd].t});}
 pi.sort(function(a,b){return b.v-a.v;});RK('rPPP',pi,175,'');
-DM('cPPP',D.pr.w,[{n:'DF-SUL',d:D.pr.ds},{n:'SP CAP',d:D.pr.sc},{n:'SP INT',d:D.pr.si},{n:'RIMES',d:D.pr.rn}],175);
+if(D.pr&&D.pr.w&&D.pr.ds)DM('cPPP',D.pr.w,[{n:'DF-SUL',d:D.pr.ds},{n:'SP CAP',d:D.pr.sc},{n:'SP INT',d:D.pr.si},{n:'RIMES',d:D.pr.rn}],175);
 
 var rn=NA,r22=[],r23=[],r24=[];
 for(var i=0;i<rn.length;i++){r22.push(D.w22n[rn[i]].rc);r23.push(D.n[rn[i]].rc);r24.push(D.w24n[rn[i]]?D.w24n[rn[i]].rc:null);}
-var t5='<div class="kr"><div class="k g"><div class="l">RC W23 Regional</div><div class="v">99.56%</div><div class="s">Meta &#9989; 98.5%</div></div><div class="k r"><div class="l">W22 D-1</div><div class="v">95.79%</div><div class="s">abaixo da meta</div></div><div class="k g"><div class="l">W24* D+1 tend.</div><div class="v">&#8593; OK</div><div class="s">todos acima</div></div></div>';
-t5+='<div class="ng"><b>&#9989; W23: todos os 12 n&oacute;s acima de RC 98.5% &mdash; recupera&ccedil;&atilde;o expressiva vs W22 D-1</b></div>';
+var t5='<div class="kr"><div class="k g"><div class="l">RC W24 Regional</div><div class="v">99.42%</div><div class="s">Meta &#9989; 98.5%</div></div><div class="k r"><div class="l">W22 D-1</div><div class="v">95.79%</div><div class="s">abaixo da meta</div></div><div class="k g"><div class="l">W24* D+1 tend.</div><div class="v">&#8593; OK</div><div class="s">todos acima</div></div></div>';
+t5+='<div class="ng"><b>&#9989; W24: todos os 13 n&oacute;s acima de RC 98.5% &mdash; meta atingida (min ECB8 99.0%)</b></div>';
 t5+='<div class="bx"><h3>RECEIVE SUCCESS | DF-SUL Nodes</h3><div class="desc">W24 D-1 (cinza) &bull; W24 Refer&ecirc;ncia (laranja) &bull; W25* D+1 parcial (azul) | Meta 98.5%</div><div class="cw"><svg id="cRc" width="100%" viewBox="0 0 960 460"></svg></div></div>';
 t5+='<div class="bx"><h3>Ranking W24</h3><div id="rRc"></div></div>';
 var rcVals={};for(var i=0;i<rn.length;i++){rcVals[rn[i]]=D.n[rn[i]].rc;}t5+=CALLOUT(rn,98.5,rcVals,'%');
@@ -402,8 +402,8 @@ ri.sort(function(a,b){return b.v-a.v;});RK('rRc',ri,98.5,'%');
 
 var sn=NA,s22=[],s23=[],s24=[];
 for(var i=0;i<sn.length;i++){s22.push(D.w22n[sn[i]].sw);s23.push(D.n[sn[i]].sw);s24.push(D.w24n[sn[i]]?D.w24n[sn[i]].sw:null);}
-var t6='<div class="kr"><div class="k g"><div class="l">SW W23 Regional</div><div class="v">99.51%</div><div class="s">Meta &#9989; 99.5%</div></div><div class="k r"><div class="l">W22 D-1</div><div class="v">98.21%</div><div class="s">abaixo da meta</div></div><div class="k g"><div class="l">W24* D+1</div><div class="v">&#8593; tend. OK</div><div class="s">maioria acima</div></div></div>';
-t6+='<div class="ng"><b>&#9989; W23: EGO8 SW 89.36% (W22) &rarr; 100.0% (W23) &mdash; principal melhora da semana</b></div>';
+var t6='<div class="kr"><div class="k g"><div class="l">SW W24 Regional</div><div class="v">98.29%</div><div class="s">Meta &#128308; 99.5%</div></div><div class="k r"><div class="l">W22 D-1</div><div class="v">98.21%</div><div class="s">abaixo da meta</div></div><div class="k g"><div class="l">W24* D+1</div><div class="v">&#8593; tend. OK</div><div class="s">maioria acima</div></div></div>';
+t6+='<div class="ng"><b>&#9888; W24: EXS9 96.82% abaixo da meta 99.5% &mdash; demais 12 n&oacute;s acima</b></div>';
 t6+='<div class="bx"><h3>STOW SUCCESS | DF-SUL Nodes</h3><div class="desc">W24 D-1 (cinza) &bull; W24 Refer&ecirc;ncia (laranja) &bull; W25* D+1 parcial (azul) | Meta 99.5%</div><div class="cw"><svg id="cSw" width="100%" viewBox="0 0 960 460"></svg></div><div class="note"><b>ECB8:</b> 98.54% | <b>ERS8:</b> 98.72% &mdash; pr&oacute;ximos da meta</div></div>';
 t6+='<div class="bx"><h3>Ranking W24</h3><div id="rSw"></div></div>';
 var swVals={};for(var i=0;i<sn.length;i++){swVals[sn[i]]=D.n[sn[i]].sw;}t6+=CALLOUT(sn,99.5,swVals,'%');
@@ -414,8 +414,8 @@ si2.sort(function(a,b){return b.v-a.v;});RK('rSw',si2,99.5,'%');
 
 var dn=NA,d22=[],d23=[],d24=[];
 for(var i=0;i<dn.length;i++){d22.push(D.w22n[dn[i]].dp);d23.push(D.n[dn[i]].dp);d24.push(D.w24n[dn[i]]?D.w24n[dn[i]].dp:null);}
-var t7='<div class="kr"><div class="k g"><div class="l">DP W23 Regional</div><div class="v">100.00%</div><div class="s">Meta &#9989; 99.5%</div></div><div class="k r"><div class="l">W22 D-1</div><div class="v">98.53%</div><div class="s">abaixo da meta</div></div><div class="k r"><div class="l">W24* em andamento</div><div class="v">EGO8 37% | EME8 6% | EUM8 0%</div><div class="s">depart parcial</div></div></div>';
-t7+='<div class="ng"><b>&#9989; W23 Depart: 100.00% em todos os 12 n&oacute;s &mdash; recupera&ccedil;&atilde;o completa vs W22 D-1 (EGO8 86.2% &rarr; 100%)</b></div>';
+var t7='<div class="kr"><div class="k g"><div class="l">DP W24 Regional</div><div class="v">97.57%</div><div class="s">Meta &#128308; 99.5%</div></div><div class="k r"><div class="l">W22 D-1</div><div class="v">98.53%</div><div class="s">abaixo da meta</div></div><div class="k r"><div class="l">W24* em andamento</div><div class="v">EGO8 37% | EME8 6% | EUM8 0%</div><div class="s">depart parcial</div></div></div>';
+t7+='<div class="ng"><b>&#9888; W24 Depart: EUM8 84.65% | EME8 89.95% | EGO8 88.16% | EIJ8 91.74% &mdash; 4 n&oacute;s abaixo da meta 99.5%</b></div>';
 t7+='<div class="nb"><b>W24* alerta parcial:</b> EGO8 37.1% | EME8 6.0% | EUM8 0.0% &mdash; opera&ccedil;&atilde;o em andamento (gerado em 2026-06-09)</div>';
 t7+='<div class="bx"><h3>DEPART SUCCESS | DF-SUL Nodes</h3><div class="desc">W24 D-1 (cinza) &bull; W24 Refer&ecirc;ncia (laranja) &bull; W25* D+1 parcial (azul) | Meta 99.5%</div><div class="cw"><svg id="cDp" width="100%" viewBox="0 0 960 460"></svg></div></div>';
 t7+='<div class="bx"><h3>Ranking W24</h3><div id="rDp"></div></div>';
