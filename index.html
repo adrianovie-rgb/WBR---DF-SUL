@@ -103,7 +103,7 @@ var D={
   n:{ECB8:{t:'SPC',pr:36278.0,rc:99.0,sw:99.14,dp:100.0,pp:267.3},EGO8:{t:'PN',pr:16912.0,rc:99.83,sw:99.93,dp:88.16,pp:233.8},EIJ8:{t:'PN',pr:6316.0,rc:99.59,sw:99.77,dp:91.74,pp:225.0},EJO8:{t:'PN',pr:5695.0,rc:99.89,sw:99.2,dp:100.0,pp:110.8},ELO8:{t:'SPC',pr:16616.0,rc:99.55,sw:99.1,dp:99.33,pp:123.9},EME8:{t:'PN',pr:9412.0,rc:99.29,sw:99.72,dp:89.95,pp:232.3},EMR8:{t:'PN',pr:8692.0,rc:99.89,sw:99.45,dp:100.0,pp:161.1},ERS8:{t:'SPC',pr:10668.0,rc:99.68,sw:99.52,dp:99.99,pp:158.9},ESB8:{t:'PN',pr:12524.0,rc:99.01,sw:99.75,dp:100.0,pp:226.8},ESE8:{t:'SPC',pr:29871.0,rc:99.66,sw:99.67,dp:100.0,pp:210.6},EUM8:{t:'PN',pr:2141.0,rc:99.81,sw:99.67,dp:84.65,pp:243.7},EVE8:{t:'PN',pr:2045.0,rc:99.75,sw:99.9,dp:100.0,pp:178.0},EXS9:{t:'PN',pr:1738.0,rc:99.83,sw:96.82,dp:100.0,pp:147.5}},
   pt:{ECB8:'Smolka',EGO8:'AMZL',EIJ8:'Rede Frete',EJO8:'Dialogo',ELO8:'Dialogo',EME8:'Fatelog',EMR8:'Dialogo',ERS8:'Rede Frete',ESB8:'AMZL',ESE8:'AMZL',EUM8:'Rede Frete',EVE8:'Rede Frete',EXS9:'AMZL'},
   w22:{pr:107108.0,rc:99.3,sw:92.71,dp:96.49,pp:195.88},
-  w22n:{ECB8:{pr:7637.0,rc:99.23,sw:98.54,dp:100.0},EGO8:{pr:3305.0,rc:99.7,sw:100.0,dp:100.0},EIJ8:{pr:1450.0,rc:100.0,sw:100.0,dp:100.0},EJO8:{pr:4819,rc:98.13,sw:99.91,dp:100.0},ELO8:{pr:4024.0,rc:99.75,sw:99.92,dp:100.0},EME8:{pr:6830,rc:99.01,sw:99.59,dp:66.85},ERS8:{pr:8140,rc:99.89,sw:99.18,dp:100.0},ESB8:{pr:2476.0,rc:98.77,sw:99.87,dp:100.0},ESE8:{pr:6066.0,rc:100.0,sw:99.91,dp:100.0},EUM8:{pr:1908,rc:99.95,sw:100.0,dp:66.85},EVE8:{pr:2120,rc:99.93,sw:99.85,dp:100.0}},
+  w22n:{ECB8:{pr:7637.0,rc:99.23,sw:98.54,dp:100.0},EGO8:{pr:3305.0,rc:99.7,sw:100.0,dp:100.0},EIJ8:{pr:1450.0,rc:100.0,sw:100.0,dp:100.0},EJO8:{pr:4819,rc:98.13,sw:99.91,dp:100.0},ELO8:{pr:4024.0,rc:99.75,sw:99.92,dp:100.0},EME8:{pr:6830,rc:99.01,sw:99.59,dp:66.85},EMR8:{pr:2052,rc:99.65,sw:100.0,dp:100.0},ERS8:{pr:8140,rc:99.89,sw:99.18,dp:100.0},ESB8:{pr:2476.0,rc:98.77,sw:99.87,dp:100.0},ESE8:{pr:6066.0,rc:100.0,sw:99.91,dp:100.0},EUM8:{pr:1908,rc:99.95,sw:100.0,dp:66.85},EVE8:{pr:2120,rc:99.93,sw:99.85,dp:100.0}},
   w24n:{},
   w24partial:{pr:0,label:'W25 (sem dados)'},
   ph:{ECB8:[289.4,256.3,263.6,263.3,267.3],EGO8:[144.4,240.2,232.8,242.8,233.8],EIJ8:[203.2,219.2,206.3,240.2,225.0],EJO8:[116.8,102.4,112.3,118.9,110.8],ELO8:[81.6,95.8,124.2,129.8,123.9],EME8:[219.2,209.3,208.3,218.2,232.3],EMR8:[0,0,0,0,161.1],ERS8:[199.2,174.6,216.8,184.2,158.9],ESB8:[232.8,270.3,251.7,252.1,226.8],ESE8:[197.9,200.9,181.2,174.5,210.6],EUM8:[199.3,182.4,194.1,208.2,243.7],EVE8:[184.6,172.1,178.8,229.4,178.0],EXS9:[0,0,0,0,147.5]},
@@ -338,8 +338,8 @@ document.getElementById('tab2').innerHTML=t2;
 
 var vn=['ECB8','ESE8','ELO8','ESB8','ERS8','EMR8','EME8','EIJ8','EGO8','EJO8','EVE8','EUM8'];
 // W23 Forecast + Real — Fonte: DDD.xlsx Operacional, W23 completo (4 dias úteis, excluindo Corpus Christi 04/06)
-var D_fc23={ECB8:25551,EGO8:5886,EIJ8:9360,EJO8:6196,ELO8:14857,EME8:8852,EMR8:7888,ERS8:10927,ESB8:8397,ESE8:24479,EUM8:2689,EVE8:2908,EXS9:1521};
-var D_vol23_ddd={ECB8:42111,EGO8:6895,EIJ8:7239,EJO8:8172,ELO8:20912,EME8:8824,EMR8:10729,ERS8:13582,ESB8:15193,ESE8:36081,EUM8:3088,EVE8:3207,EXS9:2426};
+var D_fc23={ECB8:34611,EGO8:5110,EIJ8:5654,EJO8:5826,ELO8:17919,EME8:6803,EMR8:8765,ERS8:10408,ESB8:10535,ESE8:25368,EUM8:2309,EVE8:2138,EXS9:1360};
+var D_vol23_ddd={ECB8:36278,EGO8:16912,EIJ8:6316,EJO8:5695,ELO8:16616,EME8:9412,EMR8:8692,ERS8:10668,ESB8:12524,ESE8:29871,EUM8:2141,EVE8:2045,EXS9:1738};
 var tP23=0,tP22=0,tFC23=0;
 // Use DDD.xlsx weekly totals for Forecast vs Real comparison (mesma fonte)
 for(var i=0;i<vn.length;i++){tP23+=(D_vol23_ddd[vn[i]]||D.n[vn[i]].pr);tP22+=D.w22n[vn[i]].pr;if(D_fc23[vn[i]])tFC23+=D_fc23[vn[i]];}
